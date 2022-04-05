@@ -346,7 +346,8 @@ bool safety(int *available, int *allocated, int *need) {
 	return true;
 }
 
-void status(int *available, int *max, int *allocation, int *need) {
+//this is for the status command
+void status(int *available, int *max, int *allocation, int *need) { ///a bunch of print statements to get the proper output
 	printf("Currently Available resources: ");
 	for (int x = 0; x < n_col; x++) {
 		printf("%d ", available[x]);
@@ -409,7 +410,7 @@ void get_n_col(char *filename) {
 
 }
 
-void run_cmd() {
+void run_cmd() { //run cmd function
 	char command[100];
 	bool stillrunning = true;
 	while (stillrunning) {
@@ -428,7 +429,7 @@ void run_cmd() {
 		for (char *lowercase_cmd = command; *lowercase_cmd; lowercase_cmd++)
 			*lowercase_cmd = tolower(*lowercase_cmd);
 
-    //more print statements
+   		 //more print statements
 		if (strstr(command, "rq") != NULL) {
 			printf(
 					"\nThe Safe Sequence has started, the algorithm will now verify your requested resources (rq)...\n");
