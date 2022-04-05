@@ -29,7 +29,7 @@ clean: <br>
 ![cp386_5](https://user-images.githubusercontent.com/84096995/161671968-c4d239a2-0104-4b23-9ce0-2a21e4d68a9d.png)<br>
 ![cp386_6](https://user-images.githubusercontent.com/84096995/161671974-5bf4f83f-22fe-40c5-a221-ae7c4ae32a70.png)<br>
 
-# Individual Condribution
+# Individual Contribution
 
 All functions were completed together, but here:
  
