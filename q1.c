@@ -387,6 +387,7 @@ int sum_arr(int arr[], int n) {
 	return -1;
 }
 
+
 void get_n_col(char *filename) {
 	FILE *in = fopen("sample4_in.txt", "r");
 	if (!in) {
