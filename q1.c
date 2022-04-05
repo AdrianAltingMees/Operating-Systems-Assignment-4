@@ -120,7 +120,7 @@ int main(int argc, char *argv[]) {//to modify the command line arguments
 int readFileCustomers(char *fileName) { //this reads the file for the data
 	FILE *in = fopen("sample4_in.txt", "r"); //reads sample4_in.txt
 	if (!in) {
-		printf("Error in opening input file...exiting with error code -1\n");
+		printf("Error in opening input file. Exiting\n");
 		return -1;
 	}
 	int countnumber = 0;
@@ -142,7 +142,7 @@ int readFileCustomers(char *fileName) { //this reads the file for the data
 void readFileSequences(char *fileName, int max[n_rows][n_col]) {
 	FILE *in = fopen("sample4_in.txt", "r");
 	if (!in) {
-		printf("Error in opening input file...exiting with error code -1\n");
+		printf("Error in opening input file. Exiting\n");
 		exit(-1);
 	}
 	char *token;
@@ -334,9 +334,8 @@ bool safety(int *available, int *allocated, int *need) {
 			return false;
 		}
 	}
-	printf("State is safe, and request is satisfied:\n");
+	printf("State is safe.\n");
 	printf("The SAFE sequence is: ");
-	printf("TEST >>> %d\n", safe_seq[4]);
 	for (int x = 0; x < n_rows - 1; x++) {
 		printf(" P%d ->", safe_seq[x]);
 	}
@@ -391,7 +390,7 @@ int sum_arr(int arr[], int n) {
 void get_n_col(char *filename) {
 	FILE *in = fopen("sample4_in.txt", "r");
 	if (!in) {
-		printf("Error in opening input file...exiting with error code -1\n");
+		printf("Error in opening input file. Exiting\n");
 		exit(-1);
 	}
 
@@ -451,8 +450,7 @@ void run_cmd() { //run cmd function
 			printf("Exiting...Bye have a nice day! :D\n");
 			stillrunning = false;
 		} else {
-			printf(
-					"Invalid Command. Retry and type the following {RQ, RL, Run, Status, Quit} (Lower case for the commands also works)\n");
+			printf("Invalid Command. Retry and try one of following {RQ, RL, Run, Status, Quit}\n");
 		}
 	}
 }
