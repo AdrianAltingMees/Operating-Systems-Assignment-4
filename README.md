@@ -16,12 +16,18 @@ runq1: Question1 <br>
 	./Question1 10 5 7 8 <br>
 
 clean: <br>
-	rm -f $(OBJFILES) $(TARGET) *~ <br>\
+	rm -f $(OBJFILES) $(TARGET) *~ <br>
 ```
 
 # Screenshots
 
-Please see: https://github.com/AdrianAltingMees/Operating-Systems-Assignment-4/tree/main/docs
+
+![cp386_1](https://user-images.githubusercontent.com/84096995/161671949-d013670d-8b55-41ac-aaa6-830d085a6026.png)<br>
+![cp386_2](https://user-images.githubusercontent.com/84096995/161671952-a07ace36-f2d9-42c5-bc6f-22c83341fc8a.png)<br>
+![cp386_3](https://user-images.githubusercontent.com/84096995/161671957-c51772f1-9f17-4deb-b157-9916407c4233.png)<br>
+![cp386_4](https://user-images.githubusercontent.com/84096995/161671960-f5642b8c-e22a-4cf7-86af-32f4aa5fa916.png)<br>
+![cp386_5](https://user-images.githubusercontent.com/84096995/161671968-c4d239a2-0104-4b23-9ce0-2a21e4d68a9d.png)<br>
+![cp386_6](https://user-images.githubusercontent.com/84096995/161671974-5bf4f83f-22fe-40c5-a221-ae7c4ae32a70.png)<br>
 
 # Individual Condribution
 
