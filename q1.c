@@ -433,7 +433,7 @@ void run_cmd() { //run cmd function
 
    		 //more print statements
 		if (strstr(command, "rq") != NULL) {
-			
+			printf("\nThe Safe Sequence has started, the algorithm will now verify your requested resources (rq)...\n");
 			if (request_resource(args) == false) {
 				printf("\nSystem is not in safe state\n\n");
 			}
