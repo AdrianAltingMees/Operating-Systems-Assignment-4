@@ -36,7 +36,6 @@ void readFileSequences(char *fileName, int max[n_rows][n_col]);
 bool safety(int *available, int *allocated, int *need);
 int sum_arr(int arr[], int n);
 void get_n_col(char *filename);
-void bankersalgo();
 void run_cmd();
 int request_resource(int args[]);
 int release_resource(int args[]);
@@ -166,9 +165,6 @@ void readFileSequences(char *fileName, int max[n_rows][n_col]) {
 	fclose(in);
 }
 
-void bankersalgo() { //yeah idk what the hell to do here
-}
-
 // function requests resource
 // if it returns: 0 it Sucess
 // if it returns: -1 it Failed
@@ -254,7 +250,7 @@ void* thread_run() { //thread run function
 	printf("Safe Sequence is: ");
 	fgets(sequence, 100, stdin);
 	printf("\n");
-	char *token = strtok(sequence, " ");
+	char *token = strtok(sequence, " ");//this takes out the white spaces and retrieves only nums
 	int args[5];
 	int j = 0;
 	while (token != NULL) {
@@ -297,12 +293,15 @@ void* thread_run() { //thread run function
 	return NULL;
 }
 
+//this is the safety algorithm 
 bool safety(int *available, int *allocated, int *need) {
 	int work[n_col];
 	for (int x = 0; x < n_col; x++) {
 		work[x] = *(available + x);
 	}
 	printf("\n");
+	
+	//// initalize finishes at - 0
 	bool finish[n_col];
 	for (int x = 0; x < n_col; x++) {
 		finish[x] = false;
@@ -343,6 +342,7 @@ bool safety(int *available, int *allocated, int *need) {
 	}
 	printf(" P%d\n", safe_seq[n_rows - 1]);
 	printf("\n");
+	
 	return true;
 }
 
@@ -413,10 +413,12 @@ void get_n_col(char *filename) {
 void run_cmd() { //run cmd function
 	char command[100];
 	bool stillrunning = true;
+	
+	//values that come after user enters command
 	while (stillrunning) {
 		printf("Enter Command: ");
 		fgets(command, 100, stdin);
-		char *token = strtok(command, " ");
+		char *token = strtok(command, " ");//this takes out the white spaces and retrieves only nums
 		int args[n_col + 1];
 		token = strtok(NULL, " ");
 		int y = 0;
@@ -431,17 +433,16 @@ void run_cmd() { //run cmd function
 
    		 //more print statements
 		if (strstr(command, "rq") != NULL) {
-			printf(
-					"\nThe Safe Sequence has started, the algorithm will now verify your requested resources (rq)...\n");
+			
 			if (request_resource(args) == false) {
 				printf("\nSystem is not in safe state\n\n");
 			}
 		} else if (strstr(command, "rl") != NULL) {
-			printf(
-					"The Safe Sequence has started, the algorithm will now verify your released resources (rl)...\n\n");
+			
 			release_resource(args);
 		} else if (strstr(command, "status") != NULL) {
 			status(available_ptr, max_ptr, allocation_ptr, need_ptr);
+		//Executes status the command 
 		} else if (strstr(command, "run") != NULL) {
 			printf("run\n");
 			thread_run();
