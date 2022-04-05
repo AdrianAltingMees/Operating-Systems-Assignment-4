@@ -21,7 +21,7 @@ clean: <br>
 
 # Screenshots
 
-
+Please see: https://github.com/AdrianAltingMees/Operating-Systems-Assignment-4/tree/main/docs
 
 # Individual Condribution
 
@@ -70,6 +70,8 @@ Please See Screenshots.
 Adrian and Karan are both Varisity Atheletes in the Computer Science (BSc) program at Wilfrid Laurier University.
 
 The sole reason, motivation and drive to do this project was because it was part of a mandatory course at Laurier, and was worth marks.
+
+Links to both Githubs are on the repo.
 
 # Lisence
 
